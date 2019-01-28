@@ -1,7 +1,6 @@
     Cifra de Cezar:
 
-    É um tipo de criptografia onde cada letra de um texto é substituida por outra do mesmo alfabeto, 
-    num numero fixo de vezes
+    É um tipo de criptografia onde cada letra de um texto é substituida por outra do mesmo alfabeto em um numero fixo de vezes
      
     ex de troca de 3 posicoes: 
         A passa a ser D
@@ -33,29 +32,23 @@
 
     Formula da Cifra de Cezar em Javascript:
     ((codigoDaLetraASC - cod1Letra + desloc) % tamDoAlfabeto) + cod1Letra
+    
+    charCodeAT mostra o valor da letra em ASCII
+    
+    charCodeAT mostra o valor da letra em ASCII
+    
+ex: letra A possui qual valor em ASCII?
+>"A".charCodeAt(0)
+resultado> 65
+
+String.fromCharCode mostra a letra correspondente ao valor em ASCII
+ex: valor 72 corresponde a qual letra?
+>String.fromCharCode(72)
+resultado> "H"
 
 
-                                                OBJETIVO:
-
-- Desenhar um produto pensando nos usuários
-- Construir uma interface
-- Escutar eventos básicos do DOM
-- Escrever a lógica que cifra e descifra mensagens 
-- Realizar testes básicos que comprovem (e documentem) esta lógica
-- Manipular o DOM para que ele mostre e imprima os resultados.
+- let é uma variavel que so funciona dentro de um bloco(if, funcao, etc...)
+    
 
 
-
-Checklist
-Parte Obrigatória
-
- - README.md com explicações e desenho do projeto
- - Usar VanillaJS.
- - Permitir escrever um texto, com letras maiúsculas e minúsculas, para ser cifrado.
- - Mostrar o resultado da cifra corretamente.
- - Permitir escrever um texto, com letras maiúsculas e minúsculas, para ser descifrado.
- - Mostrar o resultado descifrado corretamente.
- - Permitir escolher o offset (deslocamento) a ser usado na cifragem/descifragem.
- - Implementa cipher.encode.
- - Implementa cipher.decode.
- - Criar testes unitários.
+                                                
