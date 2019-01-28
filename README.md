@@ -33,10 +33,8 @@
     Formula da Cifra de Cezar em Javascript:
     ((codigoDaLetraASC - cod1Letra + desloc) % tamDoAlfabeto) + cod1Letra
     
-    charCodeAT mostra o valor da letra em ASCII
     
-    charCodeAT mostra o valor da letra em ASCII
-    
+charCodeAT mostra o valor da letra em ASCII
 ex: letra A possui qual valor em ASCII?
 >"A".charCodeAt(0)
 resultado> 65
@@ -44,11 +42,4 @@ resultado> 65
 String.fromCharCode mostra a letra correspondente ao valor em ASCII
 ex: valor 72 corresponde a qual letra?
 >String.fromCharCode(72)
-resultado> "H"
-
-
-- let é uma variavel que so funciona dentro de um bloco(if, funcao, etc...)
-    
-
-
-                                                
+resultado> "H"                                 
