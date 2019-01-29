@@ -41,7 +41,7 @@
 }
 
 
-#number-code {
+#number-code1, #number-code2 {
     display: block;
     margin: auto;
     width: 60px;
@@ -49,6 +49,8 @@
     text-align: center;
     border-radius: 5px;
     padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 #text-encoder, #text-decoder{
@@ -56,21 +58,26 @@
     color: antiquewhite;  
     text-align: center;
     margin-top: 40px; 
-    padding: 4px;
-    
+    padding: 4px;  
 }
 
-.button-padrao, .button-padrao1{
+#button-padrao1, #button-padrao2{
     border-radius: 5px;
     padding: 8px;
     margin-left: 5px;
-    width: 60px;
+    width: 70px;
     background-color:#ed145b;
     border: none;
     color: antiquewhite;   
 }
 
-.button-padrao:hover{
+#button-padrao1:hover{
+    border: #ed145b;
+    border-radius: 8px;
+    color: #363636;
+}
+
+#button-padrao2:hover{
     border: #ed145b;
     border-radius: 8px;
     color: #363636;
@@ -87,6 +94,18 @@
    height: 100px;
    display: block;
    margin: auto;
-   margin-bottom: 5px;
+   margin-top: 5px;
+   margin-bottom: 8px;
+
+   text-align: center;
+   font-family: 'Titillium Web', sans-serif;
+   font-size: 15px;
+
+   word-wrap: normal;
+
+   /*tira o contorno azul que aparece ao redor do textarea, ao clicar*/
+   outline:none;
+   
+   
 }
 

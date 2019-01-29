@@ -1,31 +1,19 @@
 //window.cipher = { }; - professor pediu para ignorar por enquanto.
 
+var teste = numeroTexto(1,"abcd")
+if(teste==="bcde"){
+  console.log("OK")
+  }else{
+    console.log("Erro!")
+  }
 
-function choicecode(){
-  //escrever funcao para escolher codificar mensagem
-  
-}
+function numeroTexto(){
+    let numberCode= parseInt(document.getElementById("number-code1").value);
+    let word= document.getElementById("insert-word1").value;
+    return document.getElementById("insert-word1").value = encodeText(numberCode, word);
+  }
 
-function choicedecode(){
-  //escrever funcao para escolher decifrar mensagem
-}
-
-
-function decodeText(palavra){
-  //escrever funcao para decifrar mensagem
-}
-
-
-
-function positionDesloc(){
- var numdigitado= document.getElementsByClassName("button-padrao1").value;
-  return numdigitado
-}
-
-
-var desloc= 3;
-
-function encodeText(palavra){
+function encodeText(numberCode, word){
   let letras= "";
   let codigoDaLetraASC= [];
   let tamDoAlfabeto= 26;
@@ -34,40 +22,65 @@ function encodeText(palavra){
   let cod1Minuscula= 97;
   let codUltimaMinuscula= 122;
 
+  let espaco= " ";
+
+  for( c= 0; c < word.length; c++ ){
+    codigoDaLetraASC= word[c].charCodeAt();
+
+    if(codigoDaLetraASC >= cod1Maiuscula && codigoDaLetraASC <= codUltimaMaiuscula){
+      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula + numberCode) % tamDoAlfabeto) + cod1Maiuscula));
+    } 
+    
+    if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
+      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula + numberCode) % tamDoAlfabeto) + cod1Minuscula));
+    } 
+
+
+    /*if(codigoDaLetraASC == 32){
+      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula + numberCode) % tamDoAlfabeto) + cod1Minuscula));
+    } */
+
+
+  }
+  return letras;
+}
+
+
+function decodeNumeroTexto(){
+  let desloc= parseInt(document.getElementById("number-code2").value);
+  let palavra= document.getElementById("insert-word2").value;
+  return document.getElementById("insert-word2").value = decodeText(desloc, palavra);
+}
+
+function decodeText(desloc, palavra){
+  let letras= "";
+  let codigoDaLetraASC= [];
+  let tamDoAlfabeto= 26;
+  let cod1Maiuscula= 65;
+  let codUltimaMaiuscula= 90;
+  let cod1Minuscula= 97;
+  let codUltimaMinuscula= 122;
+ 
   for( c= 0; c < palavra.length; c++ ){
     codigoDaLetraASC= palavra.charCodeAt(c);
 
     if(codigoDaLetraASC >= cod1Maiuscula && codigoDaLetraASC <= codUltimaMaiuscula){
-      letras= letras+ (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula + desloc) % tamDoAlfabeto) + cod1Maiuscula ));
-    console.log(codigoDaLetraASC)
-
-    } else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
-      letras= letras+ (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula + desloc) % tamDoAlfabeto) + cod1Minuscula));
-      console.log(codigoDaLetraASC)
-      } 
+      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula - (desloc % tamDoAlfabeto) + tamDoAlfabeto) % tamDoAlfabeto +cod1Maiuscula)));
+    } 
+    
+    if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
+      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula - ( desloc % tamDoAlfabeto) + tamDoAlfabeto)%tamDoAlfabeto + cod1Minuscula)));
+    } 
   }
-
   return letras;
 }
 
 
 
+/*  var teste = numeroTexto(1,"abcd")
 
-
-/* formula para descobrir o cod em ascii e pular o deslocamento:
-((codigoDaLetraASC - cod1Letra + desloc) % tamDoAlfabeto) + cod1Letra
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-codigoDaLetraASC em letra maiuscula= [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 
-85, 86, 87, 8, 89, 90];
-
-codigos da tabela ascii em minusculo vao de 97 a 122!!!!!
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-//let texto= document.getElementById("insert-word");
-function decodeText(){
-    let texto= document.getElementById("insert-word2");
-    return document.write("Mensagem decifrada: " + texto.value);
-
-*/
+  if(teste==="bcde"){
+  console.log("OK")
+  }else{
+    console.log("Erro!")
+  } */
