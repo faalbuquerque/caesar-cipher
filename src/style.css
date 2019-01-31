@@ -104,7 +104,8 @@
 
     border-radius: 5px;
     padding: 8px;
-    margin: auto;  
+    margin: auto; 
+    margin-top: 8px; 
     background-color:#ed145b;
     border: none;
     color: antiquewhite;  

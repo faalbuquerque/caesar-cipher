@@ -57,10 +57,3 @@ test(decodeText(3, "Hud xp eltxlql gh erolqkd dpduholqkd wdr shtxhqlqlqkr Pdo fd
 
 console.log("Teste de decodificacao de frase com muito espacamento:");
 test(decodeText(40, "Qca      AIWHC      sgdoqc"), "Com      MUITO      espaco");
-
-
-
-
-
-
-
