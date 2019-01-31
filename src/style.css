@@ -84,28 +84,31 @@
 }
 
 #insert-word1, #insert-word2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+    text-align: center;
     background-color: rgb(221, 221, 221);
     border: none;
     border-radius: 10px;   
+    width: 300px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 8px;  
+/*tira o contorno azul que aparece ao redor do textarea, ao clicar*/
+    outline: none;
 }
 
- input[type="text"]{
-   width: 300px;
-   height: 100px;
-   display: block;
-   margin: auto;
-   margin-top: 5px;
-   margin-bottom: 8px;
+#voltar-tela{
 
-   text-align: center;
-   font-family: 'Titillium Web', sans-serif;
-   font-size: 15px;
+    border-radius: 5px;
+    padding: 8px;
+    margin: auto;  
+    background-color:#ed145b;
+    border: none;
+    color: antiquewhite;  
 
-   word-wrap: normal;
-
-   /*tira o contorno azul que aparece ao redor do textarea, ao clicar*/
-   outline:none;
-   
-   
 }
+
 

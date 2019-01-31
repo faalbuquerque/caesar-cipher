@@ -30,7 +30,7 @@
         <input type= "number" name= "number-code" id= "number-code1"  value= "" />
 
         <label> Digite o texto que será codificado: </label>
-        <input type= "text" name= "insert-word" id= "insert-word1" wrap="30" value= " " />
+        <textarea name= "insert-word" id= "insert-word1" value= " "> </textarea>
         <input type= "button" name= "botao-enviar" id= "button-padrao1" value= "Codificar" onclick= "numeroTexto()" />
       </form>
 
@@ -39,12 +39,14 @@
         <label> Escolha o deslocamento: </label>
         <input type= "number" name= "number-cod" id= "number-code2" value= "" />
         <label> Digite o texto que será decodificado: </label>
-        <input type= "text" name= "insert-word" id= "insert-word2" value= "">
+        <textarea name= "insert-word" id= "insert-word2"  value= "" ></textarea>
         <input type= "button" name= "botao-enviar" id= "button-padrao2" value= "Decifrar" onclick= "decodeNumeroTexto()" />
       </form>
+
+      <button id="voltar-tela" onclick="voltarTela()">Voltar</button>
     
     </main>
     <script src="cipher.js"></script>
-    <!-- <script src="tests.js"></script> Script de testes que ainda nao foi criado -->
+    <script src="tests.js"></script>
   </body>
 </html>
