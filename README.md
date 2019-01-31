@@ -8,10 +8,11 @@ pela letra localizada a três posições à sua frente.
 >Alfabeto normal:   
 >A B C D E F G H I J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  
 >0 1 2 3 4 5 6 7 8 9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  
+
 >Alfabeto cifrado em tres posicoes:  
 >D E F G H I J K L M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  A  B  C  
 
-Para saber mais detalhes sobre a Cifra de Cesar clique[aqui!](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar)  
+Para saber mais detalhes sobre a Cifra de Cesar clique[ aqui!](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar)  
 
 
 ###Sobre o Projeto
@@ -42,4 +43,4 @@ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
 
   ###Diagrama de Bloco do projeto:
 
-  (aqui ainda nao terminei....)
+  (ainda nao terminei....)
