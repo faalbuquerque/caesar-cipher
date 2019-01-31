@@ -34,13 +34,13 @@ Para saber mais detalhes sobre a Cifra de Cesar clique [aqui!](https://pt.wikipe
 
 <<<<<<< HEAD
 
-###Sobre o Projeto
+#Sobre o Projeto
 
 A ideia do projeto é que os organizadores de uma festa surpresa troquem mensagens entre si   
 codificando e decodificando as mensagens atraves de um programa, para que o aniversariante 
 nao entenda caso descubra as conversas. 
 =======
-##Sobre o Projeto  
+#Sobre o Projeto  
 
 A ideia do projeto é que os organizadores de uma festa surpresa troquem mensagens entre si   
 codificando e decodificando as mensagens atraves de um programa, para que o aniversariante 
@@ -78,14 +78,14 @@ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
   
 
 <<<<<<< HEAD
-  ###Diagrama de Bloco do projeto:
+  #Diagrama de Bloco do projeto:
 
   (aqui ainda nao terminei....)
 
 
 
 =======
-  ##Diagrama de Bloco do projeto:  
+  #Diagrama de Bloco do projeto:  
 
   (ainda nao terminei....)
 >>>>>>> ca312241fcff0bbdcc23f5a6fab6e8be41c879be
