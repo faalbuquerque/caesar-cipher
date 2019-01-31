@@ -15,11 +15,11 @@ pela letra localizada a três posições à sua frente.
 Para saber mais detalhes sobre a Cifra de Cesar clique[ aqui!](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar)  
 
 
-###Sobre o Projeto
+##Sobre o Projeto  
 
 A ideia do projeto é que os organizadores de uma festa surpresa troquem mensagens entre si   
 codificando e decodificando as mensagens atraves de um programa, para que o aniversariante 
-nao entenda caso descubra as conversas. 
+nao entenda caso leia as mensagens. 
 
 O programa deve receber a quantidade de deslocamento que o usuario escolher e codificar ou decodificar a mensagem digitada pelo usuario.
 
@@ -30,7 +30,7 @@ A formula utilizada para fazer o calculo de deslocamento do alfabeto é esta:
 >(5 + 7)%26
 
 
-Como em javascript as letras sao codificadas em (http://www.bosontreinamentos.com.br/hardware/tabela-ascii/ "ASCII"), a formula foi alterada:
+Como em javascript as letras sao codificadas em [ASCII](http://www.bosontreinamentos.com.br/hardware/tabela-ascii/), a formula foi alterada:
     
     
 Em ASCII o alfabeto vai de 65 a 90:
@@ -41,6 +41,6 @@ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
 >((codigoDaLetraASC - cod1Letra + desloc) % tamDoAlfabeto) + cod1Letra
   
 
-  ###Diagrama de Bloco do projeto:
+  ##Diagrama de Bloco do projeto:  
 
   (ainda nao terminei....)
