@@ -7,9 +7,9 @@ pela letra localizada a três posições à sua frente.
 
 >Exemplo de troca de 3 posicoes:  
 >
->*A passa a ser D
->*B passa a ser E
->*C passa a ser F
+>A passa a ser D
+>B passa a ser E
+>C passa a ser F
 
 
 >Alfabeto normal:   
@@ -18,7 +18,7 @@ pela letra localizada a três posições à sua frente.
 >Alfabeto cifrado em tres posicoes:  
 >D E F G H I J K L M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z  A  B  C  
 
-[Para saber mais detalhes sobre a Cifra de Cesar clique](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar " aqui!")  
+Para saber mais detalhes sobre a Cifra de Cesar clique[aqui!](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar)  
 
 
 ###Sobre o Projeto
