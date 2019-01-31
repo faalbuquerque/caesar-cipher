@@ -22,15 +22,11 @@ function encodeText(numberCode, word){
     if(codigoDaLetraASC >= cod1Maiuscula && codigoDaLetraASC <= codUltimaMaiuscula){
       letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula + numberCode) % tamDoAlfabeto) + cod1Maiuscula));
     } 
-    
-    if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
+    else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
       letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula + numberCode) % tamDoAlfabeto) + cod1Minuscula));
-    } 
-
-    if(codigoDaLetraASC === espaco){
-      letras= letras + (String.fromCharCode(codigoDaLetraASC));
-    } 
-    
+    } else {
+      letras= letras + (String.fromCharCode(codigoDaLetraASC))
+    }   
   }
   return letras;
 }
@@ -50,6 +46,9 @@ function decodeText(desloc, palavra){
   let cod1Minuscula= 97;
   let codUltimaMinuscula= 122;
   let espaco= 32;
+
+  let cod1Especiais= 33;
+  let codUltimoEspeciais= 64;
  
   for( c= 0; c < palavra.length; c++ ){
     codigoDaLetraASC= palavra.charCodeAt(c);
@@ -57,13 +56,10 @@ function decodeText(desloc, palavra){
     if(codigoDaLetraASC >= cod1Maiuscula && codigoDaLetraASC <= codUltimaMaiuscula){
       letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula - (desloc % tamDoAlfabeto) + tamDoAlfabeto) % tamDoAlfabeto + cod1Maiuscula)));
     } 
-    
-    if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
+    else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
       letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula - (desloc % tamDoAlfabeto) + tamDoAlfabeto)%tamDoAlfabeto + cod1Minuscula)));
-    } 
-
-    if(codigoDaLetraASC === espaco){
-      letras= letras + (String.fromCharCode(codigoDaLetraASC));
+    } else {
+      letras= letras + (String.fromCharCode(codigoDaLetraASC))
     }
   }
   return letras;
