@@ -16,7 +16,7 @@ pela letra localizada a três posições à sua frente.
 Para saber mais detalhes sobre a Cifra de Cesar clique [aqui!](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar)  
 
 
-#Sobre o Projeto
+Sobre o Projeto
 
 A ideia do projeto é que os organizadores de uma festa surpresa troquem mensagens entre si     
 codificando e decodificando as mensagens através de um programa, para que o aniversariante   
