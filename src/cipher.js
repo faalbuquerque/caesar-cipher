@@ -1,5 +1,14 @@
 //window.cipher = { }; - professor pediu para ignorar por enquanto.
 
+ function choicecode(code){
+
+ }
+
+
+ function choicedecode(){
+  
+ }
+
 function numeroTexto(){
     let numberCode= parseInt(document.getElementById("number-code1").value);
     let word= document.getElementById("insert-word1").value;
@@ -9,11 +18,11 @@ function encodeText(numberCode, word){
 
   let letras= "";
   let codigoDaLetraASC= [];
-  let tamDoAlfabeto= 26;
-  let cod1Maiuscula= 65;
-  let codUltimaMaiuscula= 90;
-  let cod1Minuscula= 97;
-  let codUltimaMinuscula= 122;
+  const tamDoAlfabeto= 26;
+  const cod1Maiuscula= 65;
+  const codUltimaMaiuscula= 90;
+  const cod1Minuscula= 97;
+  const codUltimaMinuscula= 122;
 
   for(c= 0; c < word.length; c++){
     codigoDaLetraASC= word[c].charCodeAt();
@@ -39,11 +48,11 @@ function decodeText(desloc, palavra){
 
   let letras= "";
   let codigoDaLetraASC= [];
-  let tamDoAlfabeto= 26;
-  let cod1Maiuscula= 65;
-  let codUltimaMaiuscula= 90;
-  let cod1Minuscula= 97;
-  let codUltimaMinuscula= 122;
+  const tamDoAlfabeto= 26;
+  const cod1Maiuscula= 65;
+  const codUltimaMaiuscula= 90;
+  const cod1Minuscula= 97;
+  const codUltimaMinuscula= 122;
 
   for( c= 0; c < palavra.length; c++ ){
     codigoDaLetraASC= palavra[c].charCodeAt();
@@ -58,15 +67,9 @@ function decodeText(desloc, palavra){
   return letras;
 }
 
-function qtdCaracters(){
-  let word= document.getElementById("insert-word1").value;
-  let limite= 150;
 
-  if(word.length >=limite){
-    document.write(getElementById("qdt")).innerHTML;
-  }
-}
 
-function voltarTela() {
+function botaoVoltar() {
   document.getElementById("voltar-tela").style.display = "none";
 }
+

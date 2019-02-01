@@ -68,7 +68,8 @@
     width: 70px;
     background-color:#ed145b;
     border: none;
-    color: antiquewhite;   
+    color: antiquewhite;
+    outline: none;   
 }
 
 #button-padrao1:hover{
@@ -101,10 +102,9 @@
 }
 
 legend{
-    font-size: 12px;
+    font-size: 11px;
     padding: 1px;
     margin-bottom: 8px;
-
 }
 
 #voltar-tela{
@@ -115,7 +115,8 @@ legend{
     margin-left: 40px;
     background-color:#ed145b;
     border: none;
-    color: antiquewhite;  
+    color: antiquewhite;
+    outline: none;  
 }
 
 

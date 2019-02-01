@@ -8,7 +8,6 @@
         }
     }
 
-
 console.log("Teste de codificacao de letras Minusculas:");
 test(encodeText(1, "abcd") , "bcde");
 
@@ -35,7 +34,6 @@ test(encodeText(40, "Com      MUITO      espaco"), "Qca      AIWHC      sgdoqc")
 
 console.log("Teste de codificacao de caracteres especiais:");
 test(encodeText(1, "Olá tudo bem?"), "Pmá uvep cfn?");
-
 
 
 console.log("Teste de decodificacao de letras minusculas:");

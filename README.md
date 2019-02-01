@@ -31,11 +31,7 @@ decodificar a mensagem digitada.
 >Exemplo: (codigoDaLetra + 7)%26  
 >(5 + 7)%26  
 
-Em javascript as letras sao codificadas em [ASCII](http://www.bosontreinamentos.com.br/hardware/tabela-ascii/)  
-   
-Em ASCII o alfabeto vai de 65 a 90:    
-A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z    
-65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90   
+Em javascript as letras sao codificadas em [ASCII](http://www.bosontreinamentos.com.br/hardware/tabela-ascii/)   
 
 >Formula da Cifra de Cezar alterada para usar em Javascript:
 >(aqui deve entrar uma explicacao da formula...)  
@@ -44,5 +40,6 @@ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
   
   #Diagrama de Bloco do projeto:
 
->(aqui deve entrar o diagrama que aida estou fazendo....)  
+>![teste](https://github.com/faalbuquerque/caesar-cipher/raw/master/path/to/diagramadebloco1.jpg)
+
 
