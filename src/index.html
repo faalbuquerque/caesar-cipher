@@ -21,28 +21,28 @@
       <h2 id= "title2">O que deseja fazer? </h2>
 
       <form name= "choice" id= "choice" action= "#" method= "post">
-            <input type= "button" name= "botao-enviar" id= "code" value= "Codificar Mensagem" onclick= "choicecode()" />
-            <input type= "button" name= "botao-enviar" id= "decode" value= "Decifrar Mensagem" onclick= "choicedecode()" />  
+            <input type= "button" name= "botao-enviar" id= "code" value= "Codificar Mensagem" onclick= "choicecode()"/>
+            <input type= "button" name= "botao-enviar" id= "decode" value= "Decifrar Mensagem" onclick= "choicedecode()"/>  
       </form>
 
       <form name= "text-encoder" id= "text-encoder" action= "#" method= "post">
         
         <label> Escolha o deslocamento: </label>
-        <input type= "number" name= "number-code" id= "number-code1"  value= "" />
+        <input type= "number" name= "number-code" id= "number-code1"  value= ""/>
 
         <label> Digite o texto que será codificado: </label>
-        <textarea name= "insert-word" id= "insert-word1" maxlength="150"  value= " "> </textarea>
-        <!--<legend>A mensagem tem um limite de 150 caracteres!</legend>-->
+        <textarea name= "insert-word" id= "insert-word1" maxlength="150"  value= " "></textarea>
+        <legend>A mensagem tem um limite de 150 caracteres!</legend>
         <input type= "button" name= "botao-enviar" id= "button-padrao1" value= "Codificar" onclick= "numeroTexto()" />
       </form>
 
       <form name= "text-decoder" id= "text-decoder" action= "#" method= "post">
         <label> Escolha o deslocamento: </label>
-        <input type= "number" name= "number-cod" id= "number-code2" value= "" />
+        <input type= "number" name= "number-cod" id= "number-code2" value= ""/>
         <label> Digite o texto que será decodificado: </label>
-        <textarea name= "insert-word" id= "insert-word2"  value= "" legend ></textarea>
-        <!--<legend>A mensagem tem um limite de 150 caracteres!</legend>-->
-        <input type= "button" name= "botao-enviar" id= "button-padrao2" value= "Decifrar" onclick= "decodeNumeroTexto()" />
+        <textarea name= "insert-word" id= "insert-word2"  maxlength="150" value= ""></textarea>
+        <legend>A mensagem tem um limite de 150 caracteres!</legend>
+        <input type= "button" name= "botao-enviar" id= "button-padrao2" value= "Decifrar" onclick= "decodeNumeroTex()" />
       </form>
 
       <button id="voltar-tela" onclick="voltarTela()">Voltar</button>

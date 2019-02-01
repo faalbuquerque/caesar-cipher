@@ -95,7 +95,7 @@
     display: block;
     margin: auto;
     margin-top: 5px;
-    margin-bottom: 8px;  
+      
 /*tira o contorno azul que aparece ao redor do textarea, ao clicar*/
     outline: none;
 }
@@ -103,11 +103,11 @@
 legend{
     font-size: 12px;
     padding: 1px;
-    margin-top: 5px;
+    margin-bottom: 8px;
+
 }
 
 #voltar-tela{
-
     border-radius: 5px;
     padding: 8px;
     margin: auto; 
@@ -116,7 +116,6 @@ legend{
     background-color:#ed145b;
     border: none;
     color: antiquewhite;  
-
 }
 
 
