@@ -38,8 +38,7 @@ Em javascript as letras sao codificadas em [ASCII](http://www.bosontreinamentos.
 
 >((codigoDaLetraASC - cod1Letra + desloc) % tamDoAlfabeto) + cod1Letra
   
-  #Diagrama de Bloco do projeto:
-
->![Diagrama de Bloco do projeto:](https://github.com/faalbuquerque/caesar-cipher/blob/master/path/to/diagramadebloco1.jpg)
+  
+>![Diagrama de Bloco](https://github.com/faalbuquerque/caesar-cipher/raw/master/path/to/diagramadebloco1.jpg)
 
 
