@@ -14,19 +14,19 @@ function encodeText(numberCode, word){
   let codUltimaMaiuscula= 90;
   let cod1Minuscula= 97;
   let codUltimaMinuscula= 122;
-  let espaco= 32;
   
   for(c= 0; c < word.length; c++){
     codigoDaLetraASC= word[c].charCodeAt();
 
     if(codigoDaLetraASC >= cod1Maiuscula && codigoDaLetraASC <= codUltimaMaiuscula){
       letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula + numberCode) % tamDoAlfabeto) + cod1Maiuscula));
-    } 
-    else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
+    
+    } else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
       letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula + numberCode) % tamDoAlfabeto) + cod1Minuscula));
-    } else {
+
+    } else{
       letras= letras + (String.fromCharCode(codigoDaLetraASC))
-    }   
+    }
   }
   return letras;
 }
@@ -45,26 +45,32 @@ function decodeText(desloc, palavra){
   let codUltimaMaiuscula= 90;
   let cod1Minuscula= 97;
   let codUltimaMinuscula= 122;
-  let espaco= 32;
-
-  let cod1Especiais= 33;
-  let codUltimoEspeciais= 64;
- 
+   
   for( c= 0; c < palavra.length; c++ ){
     codigoDaLetraASC= palavra.charCodeAt(c);
 
     if(codigoDaLetraASC >= cod1Maiuscula && codigoDaLetraASC <= codUltimaMaiuscula){
       letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula - (desloc % tamDoAlfabeto) + tamDoAlfabeto) % tamDoAlfabeto + cod1Maiuscula)));
-    } 
-    else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
+    
+    }else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
       letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula - (desloc % tamDoAlfabeto) + tamDoAlfabeto)%tamDoAlfabeto + cod1Minuscula)));
-    } else {
+
+    } else{
       letras= letras + (String.fromCharCode(codigoDaLetraASC))
     }
   }
   return letras;
 }
 
+function qtdCaracters(){
+  let word= document.getElementById("insert-word1").value;
+  let limite= 150;
+
+  if(word.length >=limite){
+    document.write(getElementById("qdt")).innerHTML;
+  }
+  
+}
 
 
 function voltarTela() {

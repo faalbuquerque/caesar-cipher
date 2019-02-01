@@ -28,10 +28,14 @@ console.log("Teste de codificacao de frases com letras maiusculas, minusculas e 
 test(encodeText(5, "Ola Fabiane"), "Tqf Kfgnfsj");
 
 console.log("Teste de codificacao de frase grande:");
-test(encodeText(3, "Era um biquini de bolinha amarelinha tao pequenininho Mal cabia na Ana Maria Biquini de bolinha amarelinha tao pequenininho Que na palma da mao se escondia"), "Hud xp eltxlql gh erolqkd dpduholqkd wdr shtxhqlqlqkr Pdo fdeld qd Dqd Pduld Eltxlql gh erolqkd dpduholqkd wdr shtxhqlqlqkr Txh qd sdopd gd pdr vh hvfrqgld");
+test(encodeText(3, "Era um biquini de bolinha amarelinha tao pequenininho Mal cabia na Ana Maria"), "Hud xp eltxlql gh erolqkd dpduholqkd wdr shtxhqlqlqkr Pdo fdeld qd Dqd Pduld");
 
 console.log("Teste de codificacao de frase com muito espacamento:");
 test(encodeText(40, "Com      MUITO      espaco"), "Qca      AIWHC      sgdoqc");
+
+console.log("Teste de codificacao de caracteres especiais:");
+test(encodeText(1, "Olá tudo bem?"), "Pmá uvep cfn?");
+
 
 
 console.log("Teste de decodificacao de letras minusculas:");
@@ -52,8 +56,12 @@ test(decodeText(50, "DEFG"), "FGHI");
 console.log("Teste de decodificacao de frases com letras maiusculas, minusculas e espaco:");
 test(decodeText(5, "Tqf Kfgnfsj"), "Ola Fabiane");
 
-console.log("Teste de decodificacao de de frase grande:");
-test(decodeText(3, "Hud xp eltxlql gh erolqkd dpduholqkd wdr shtxhqlqlqkr Pdo fdeld qd Dqd Pduld Eltxlql gh erolqkd dpduholqkd wdr shtxhqlqlqkr Txh qd sdopd gd pdr vh hvfrqgld"), "Era um biquini de bolinha amarelinha tao pequenininho Mal cabia na Ana Maria Biquini de bolinha amarelinha tao pequenininho Que na palma da mao se escondia");
+console.log("Teste de decodificacao de frase grande:");
+test(decodeText(3, "Hud xp eltxlql gh erolqkd dpduholqkd wdr shtxhqlqlqkr Pdo fdeld qd Dqd Pduld"), "Era um biquini de bolinha amarelinha tao pequenininho Mal cabia na Ana Maria");
 
 console.log("Teste de decodificacao de frase com muito espacamento:");
 test(decodeText(40, "Qca      AIWHC      sgdoqc"), "Com      MUITO      espaco");
+
+console.log("Teste de decodificacao de caracteres especiais:");
+test(decodeText(1, "Pmá uvep cfn?"), "Olá tudo bem?");
+
