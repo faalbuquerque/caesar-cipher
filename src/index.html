@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900" rel="stylesheet">
   </head>
   <body id= "tela"> 
-    <!-- <div id="root"></div> Para que serve esta div que ja veio no projeto? -->
 
     <header>
       <h1 id= "title1">Caesar Cipher</h1>
@@ -18,36 +17,37 @@
 
     <main>
 
-      <h2 id= "title2">O que deseja fazer? </h2>
+      <h2 id= "title2"> O que deseja fazer? </h2>
 
-      <form name= "choice" id= "choice" action= "#" method= "post">
-            <input type= "button" name= "botao-enviar" id= "code" value= "Codificar Mensagem" onclick= "choicecode()"/>
-            
-            <input type= "button" name= "botao-enviar" id= "decode" value= "Decifrar Mensagem" onclick= "choicedecode()"/>  
+      <form name= "choice" id= "choice" method= "post">
+        <input type= "button" id= "code" value= "Codificar Mensagem" onclick= "choiceCode()" />
+        <input type= "button" id= "decode" value= "Decifrar Mensagem" onclick= "choiceDecode()" />  
       </form>
 
-      <form name= "text-encoder" id= "text-encoder" action= "#" method= "post">
-        
-        <label> Escolha o deslocamento: </label>
-        <input type= "number" name= "number-code" id= "number-code1"  value= ""/>
+      <div id="middle">
 
-        <label> Digite o texto que será codificado: </label>
-        <textarea name= "insert-word" id= "insert-word1" maxlength="150"  value= " "></textarea>
-        <legend>A mensagem tem um limite de 150 caracteres!</legend>
-        <input type= "button" name= "botao-enviar" id= "button-padrao1" value= "Codificar" onclick= "numeroTexto()" />
-      </form>
+        <form id= "text-encoder" method= "post">
+          <label> Escolha o deslocamento: </label>
+          <input type= "number" id= "number-code1" />
+          <label> Digite o texto que será codificado: </label>
+          <textarea id= "insert-word1" maxlength="150"></textarea>
+          <legend>A mensagem tem um limite de 150 caracteres!</legend>
+          <input type= "button" id= "button-padrao1" value= "Codificar" onclick= "numeroTexto()" />
+        </form>
 
-      <form name= "text-decoder" id= "text-decoder" action= "#" method= "post">
-        <label> Escolha o deslocamento: </label>
-        <input type= "number" name= "number-cod" id= "number-code2" value= ""/>
-        <label> Digite o texto que será decodificado: </label>
-        <textarea name= "insert-word" id= "insert-word2"  maxlength="150" value= ""></textarea>
-        <legend>A mensagem tem um limite de 150 caracteres!</legend>
-        <input type= "button" name= "botao-enviar" id= "button-padrao2" value= "Decifrar" onclick= "decodeNumeroTexto()" />
-      </form>
+        <form id= "text-decoder" method= "post">
+          <label> Escolha o deslocamento: </label>
+          <input type= "number" id= "number-code2" />
+          <label> Digite o texto que será decodificado: </label>
+          <textarea id= "insert-word2"  maxlength="150"></textarea>
+          <legend>A mensagem tem um limite de 150 caracteres!</legend>
+          <input type= "button" id= "button-padrao2" value= "Decifrar" onclick= "decodeNumeroTexto()" />
+        </form>
 
-      <button id="voltar-tela" onclick="botaoVoltar()">Voltar</button>
-    
+        <button id="voltar-tela" onclick="botaoVoltar()">Voltar</button>
+
+      </div>
+      
     </main>
     <script src="cipher.js"></script>
     <script src="tests.js"></script>

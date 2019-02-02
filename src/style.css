@@ -17,6 +17,10 @@
     color: antiquewhite;  
 }
 
+#middle{
+    display: none;
+}
+
 #code, #decode{
     padding: 30px;   
     width: 300px;   
@@ -25,7 +29,8 @@
     border: none;
     border-radius: 10px;
     font-size: 15px;
-    font-weight: bold;    
+    font-weight: bold;
+    outline: none;     
 }
 
 #code{
@@ -39,7 +44,6 @@
     color: antiquewhite;
     transition-delay: 0.3s;  
 }
-
 
 #number-code1, #number-code2 {
     display: block;
@@ -95,9 +99,7 @@
     height: 100px;
     display: block;
     margin: auto;
-    margin-top: 5px;
-      
-/*tira o contorno azul que aparece ao redor do textarea, ao clicar*/
+    margin-top: 5px;      
     outline: none;
 }
 
@@ -111,8 +113,8 @@ legend{
     border-radius: 5px;
     padding: 8px;
     margin: auto; 
-    margin-top: 8px; 
-    margin-left: 40px;
+    margin-top: 13px; 
+    margin-left: 800px;
     background-color:#ed145b;
     border: none;
     color: antiquewhite;
