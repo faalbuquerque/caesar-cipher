@@ -32,15 +32,17 @@ Em javaScript as letras são codificadas em [ASCII](http://www.bosontreinamentos
 
 ![Diagrama de Bloco](https://github.com/faalbuquerque/caesar-cipher/blob/master/src/images/diagramadebloco.jpg)
 
-### Planejamento:
-
+### Como me organizei:
 * Escrevi todo HTML;
 * Apliquei o CSS básico;
 * Estudei a logica das formulas de codificação;
+* Estudei o conceito de String.fromCharCode() e charCodeAt()
 * Estudei o funcionamento de Arrays em javaScript;
-* Criei as funções em JavaScript e alimentei o HTML;
+* Criei as funções de codificar e decodificar e alimentei o HTML;
 * Criei os teste unitários;
-* Adicionei funções extras e layout melhorado.
+* Adicionei funções extras e melhorei o layout;
+* Criei diagrama de blocos;
+* Criei README.
 
 
 
