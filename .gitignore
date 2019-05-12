@@ -1,5 +1,6 @@
 .DS_Store
 *.swp
 package-lock.json
+package.json
 .nyc_output/
 node_modules/
