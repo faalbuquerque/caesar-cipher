@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-console */
   
 function test(resultFuncao, resultCorreto){
 
