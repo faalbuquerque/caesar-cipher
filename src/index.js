@@ -3,20 +3,28 @@
 
 let buttonId = document.querySelector('.back-screen');
 buttonId.addEventListener('click', () => {
-    buttonBack();
+    displayBlock();
+    valueNone();
+    buttonNone();
 });
 
-function buttonBack() {
-    document.querySelector('.text-encoder').style.display = 'block';
-    document.querySelector('#number-code').value = '';
-    document.querySelector('#insert-word-code').value = '';
-    document.querySelector('.text-decoder').style.display = 'block';
-    document.querySelector('#number-decode').value = '';
-    document.querySelector('#insert-word-decode').value = '';
-    document.querySelector('#decode').style.display = 'block';
-    document.querySelector('#code').style.display = 'block';
+let displayBlock = () => {
+    let itens = ['.text-encoder', '.text-decoder', '#decode', '#code'];
+    for (item of itens){
+        document.querySelector(item).style.display = 'block';
+    }
+};
+
+let valueNone = () => {
+    let itens = ['#number-code', '#insert-word-code', '#number-decode', '#insert-word-decode'];
+    for (item of itens){
+        document.querySelector(item).value = '';
+    }
+};
+
+let buttonNone = () => {
     document.querySelector('.middle').style.display = 'none';
-}
+};
 
 let choiceCodeId = document.querySelector('#code');
 choiceCodeId.addEventListener('click', () => {
@@ -28,22 +36,23 @@ choiceDecodeId.addEventListener('click', () => {
     choiceDecode();
 });
 
-function choiceCode(){
+let choiceCode = () => { 
     document.querySelector('.text-decoder').style.display = 'none';
     document.querySelector('#decode').style.display = 'none';
     document.querySelector('.middle').style.display = 'block';
-}
+};
 
-function choiceDecode(){
+let choiceDecode = () => {
     document.querySelector('.text-encoder').style.display = 'none';
     document.querySelector('#code').style.display = 'none';
     document.querySelector('.middle').style.display = 'block';
-}
+};
 
 let numberTextId = document.querySelector('#button-code');
 numberTextId.addEventListener('click', () => {
     numberText();
 });
+
 
 function numberText(){
     let numberCode= parseInt(document.querySelector('#number-code').value);

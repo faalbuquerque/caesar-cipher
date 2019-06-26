@@ -30,7 +30,7 @@ Em javaScript as letras são codificadas em [ASCII](http://www.bosontreinamentos
 
 ## Diagrama de Bloco:
 
-![Diagrama de Bloco](https://github.com/faalbuquerque/caesar-cipher/blob/master/src/images/diagramadebloco.jpg)
+![Diagrama de Bloco](https://github.com/faalbuquerque/caesar-cipher/blob/master/images/diagramadebloco.jpg)
 
 ### Como me organizei:
 * Escrevi todo HTML;
