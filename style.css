@@ -1,27 +1,27 @@
-#tela{
+.screen{
     background-color: #363636;
     font-family: 'Titillium Web', sans-serif;
     color: #a8b7be; 
 }
 
-#title1{
+.main-title{
     background-color: #4F4F4F;
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
     color: #ed145b;
 }
 
-#title2{
+.subtitle{
     text-align: center;
     font-weight: lighter;
     color: antiquewhite;  
 }
 
-#middle{
+.middle{
     display: none;
 }
 
-#code, #decode{
+.layout-code, .layout-decode{
     padding: 30px;   
     width: 300px;   
     display: block;
@@ -33,19 +33,19 @@
     outline: none;     
 }
 
-#code{
+.layout-code{
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-#code:hover, #decode:hover{
+.layout-code:hover, .layout-decode:hover{
     background-color:#ed145b;
     cursor: pointer;
     color: antiquewhite;
     transition-delay: 0.3s;  
 }
 
-#number-code1, #number-code2 {
+.layout-number-code, .layout-number-decode {
     display: block;
     margin: auto;
     width: 60px;
@@ -57,7 +57,7 @@
     margin-bottom: 10px;
 }
 
-#text-encoder, #text-decoder{
+.text-encoder, .text-decoder{
     background-color: #4F4F4F;
     color: antiquewhite;  
     text-align: center;
@@ -65,7 +65,7 @@
     padding: 4px;  
 }
 
-#button-padrao1, #button-padrao2{
+#button-code, #button-decode{
     border-radius: 5px;
     padding: 8px;
     margin-left: 5px;
@@ -88,7 +88,7 @@
     color: #363636;
 }
 
-#insert-word1, #insert-word2{
+.layout-insert-word-code, .layout-insert-word-decode{
     font-family: 'Titillium Web', sans-serif;
     font-size: 15px;
     text-align: center;
@@ -109,7 +109,7 @@ legend{
     margin-bottom: 8px;
 }
 
-#voltar-tela{
+.back-screen{
     border-radius: 5px;
     padding: 8px;
     margin: auto; 

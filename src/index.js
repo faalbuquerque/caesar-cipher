@@ -1,83 +1,108 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 
-function botaoVoltar() {
-  document.getElementById("text-encoder").style.display = "block";
-  document.getElementById("number-code1").value = "";
-  document.getElementById("insert-word1").value = "";
-  document.getElementById("text-decoder").style.display = "block";
-  document.getElementById("number-code2").value = "";
-  document.getElementById("insert-word2").value = "";
-  document.getElementById("decode").style.display = "block";
-  document.getElementById("code").style.display = "block";
-  document.getElementById("middle").style.display = "none";
+let buttonId = document.querySelector('.back-screen');
+buttonId.addEventListener('click', () => {
+    buttonBack();
+});
+
+function buttonBack() {
+    document.querySelector('.text-encoder').style.display = 'block';
+    document.querySelector('#number-code').value = '';
+    document.querySelector('#insert-word-code').value = '';
+    document.querySelector('.text-decoder').style.display = 'block';
+    document.querySelector('#number-decode').value = '';
+    document.querySelector('#insert-word-decode').value = '';
+    document.querySelector('#decode').style.display = 'block';
+    document.querySelector('#code').style.display = 'block';
+    document.querySelector('.middle').style.display = 'none';
 }
 
+let choiceCodeId = document.querySelector('#code');
+choiceCodeId.addEventListener('click', () => {
+    choiceCode();
+});
+
+let choiceDecodeId = document.querySelector('#decode');
+choiceDecodeId.addEventListener('click', () => {
+    choiceDecode();
+});
+
 function choiceCode(){
-  document.getElementById("text-decoder").style.display = "none";
-  document.getElementById("decode").style.display = "none";
-  document.getElementById("middle").style.display = "block";
-  
+    document.querySelector('.text-decoder').style.display = 'none';
+    document.querySelector('#decode').style.display = 'none';
+    document.querySelector('.middle').style.display = 'block';
 }
 
 function choiceDecode(){
-  document.getElementById("text-encoder").style.display = "none";
-  document.getElementById("code").style.display = "none";
-  document.getElementById("middle").style.display = "block";
+    document.querySelector('.text-encoder').style.display = 'none';
+    document.querySelector('#code').style.display = 'none';
+    document.querySelector('.middle').style.display = 'block';
 }
- 
-function numeroTexto(){
-  let numberCode= parseInt(document.getElementById("number-code1").value);
-  let word= document.getElementById("insert-word1").value;
-  return document.getElementById("insert-word1").value= encodeText(numberCode, word);
+
+let numberTextId = document.querySelector('#button-code');
+numberTextId.addEventListener('click', () => {
+    numberText();
+});
+
+function numberText(){
+    let numberCode= parseInt(document.querySelector('#number-code').value);
+    let word= document.querySelector('#insert-word-code').value;
+    return document.querySelector('#insert-word-code').value= encodeText(numberCode, word);
 }
 
 function encodeText(numberCode, word){
-  let letras= "";
-  let codigoDaLetraASC= [];
-  const tamDoAlfabeto= 26;
-  const cod1Maiuscula= 65;
-  const codUltimaMaiuscula= 90;
-  const cod1Minuscula= 97;
-  const codUltimaMinuscula= 122;
+    let letters= '';
+    let codCharASC= [];
+    const alphaSize= 26;
+    const firstUppercase= 65;
+    const lestUppercase= 90;
+    const firstLowercase= 97;
+    const lestLowercase= 122;
 
-  for(c= 0; c < word.length; c++){
-    codigoDaLetraASC= word[c].charCodeAt();
-    if(codigoDaLetraASC >= cod1Maiuscula && codigoDaLetraASC <= codUltimaMaiuscula){
-      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula + (numberCode % tamDoAlfabeto) + tamDoAlfabeto) % tamDoAlfabeto + cod1Maiuscula)));
+    for(c= 0; c < word.length; c++){
+        codCharASC= word[c].charCodeAt();
+        if(codCharASC >= firstUppercase && codCharASC <= lestUppercase){
+            letters= letters + (String.fromCharCode(((codCharASC - firstUppercase + (numberCode % alphaSize) + alphaSize) % alphaSize + firstUppercase)));
        
-    } else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
-      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula + (numberCode % tamDoAlfabeto) + tamDoAlfabeto) % tamDoAlfabeto + cod1Minuscula)));
-    } else{
-      letras= letras + (String.fromCharCode(codigoDaLetraASC))
+        } else if(codCharASC >= firstLowercase && codCharASC <= lestLowercase){
+            letters= letters + (String.fromCharCode(((codCharASC - firstLowercase + (numberCode % alphaSize) + alphaSize) % alphaSize + firstLowercase)));
+        } else{
+            letters= letters + (String.fromCharCode(codCharASC));
+        }
     }
-  }
-  return letras;
+    return letters;
 }
 
+let decodeNumberTextId = document.querySelector('#button-decode');
+decodeNumberTextId.addEventListener('click', () => {
+    decodeNumberText();
+});
 
-function decodeNumeroTexto(){
-  let desloc= parseInt(document.getElementById("number-code2").value);
-  let palavra= document.getElementById("insert-word2").value;
-  return document.getElementById("insert-word2").value= decodeText(desloc, palavra);
+function decodeNumberText(){
+    let desloc= parseInt(document.querySelector('#number-decode').value);
+    let letter= document.querySelector('#insert-word-decode').value;
+    return document.querySelector('#insert-word-decode').value= decodeText(desloc, letter);
 }
 
-function decodeText(desloc, palavra){
-  let letras= "";
-  let codigoDaLetraASC= [];
-  const tamDoAlfabeto= 26;
-  const cod1Maiuscula= 65;
-  const codUltimaMaiuscula= 90;
-  const cod1Minuscula= 97;
-  const codUltimaMinuscula= 122;
+function decodeText(desloc, letter){
+    let letters= '';
+    let codCharASC= [];
+    const alphaSize= 26;
+    const firstUppercase= 65;
+    const lestUppercase= 90;
+    const firstLowercase= 97;
+    const lestLowercase= 122;
 
-  for( c= 0; c < palavra.length; c++ ){
-    codigoDaLetraASC= palavra[c].charCodeAt();
-    if(codigoDaLetraASC >= cod1Maiuscula && codigoDaLetraASC <= codUltimaMaiuscula){
-      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Maiuscula - (desloc % tamDoAlfabeto) + tamDoAlfabeto) % tamDoAlfabeto + cod1Maiuscula)));
-    }else if(codigoDaLetraASC >= cod1Minuscula && codigoDaLetraASC <= codUltimaMinuscula){
-      letras= letras + (String.fromCharCode(((codigoDaLetraASC - cod1Minuscula - (desloc % tamDoAlfabeto) + tamDoAlfabeto) % tamDoAlfabeto + cod1Minuscula)));
-    } else{
-      letras= letras + (String.fromCharCode(codigoDaLetraASC))
+    for( c= 0; c < letter.length; c++ ){
+        codCharASC= letter[c].charCodeAt();
+        if(codCharASC >= firstUppercase && codCharASC <= lestUppercase){
+            letters= letters + (String.fromCharCode(((codCharASC - firstUppercase - (desloc % alphaSize) + alphaSize) % alphaSize + firstUppercase)));
+        }else if(codCharASC >= firstLowercase && codCharASC <= lestLowercase){
+            letters= letters + (String.fromCharCode(((codCharASC - firstLowercase - (desloc % alphaSize) + alphaSize) % alphaSize + firstLowercase)));
+        } else{
+            letters= letters + (String.fromCharCode(codCharASC));
+        }
     }
-  }
-  return letras;
+    return letters;
 }
