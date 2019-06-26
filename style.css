@@ -8,6 +8,7 @@
 }
 
 .main-title{
+    border-radius: 5px;
     background-color: #4F4F4F;
     text-align: center;
     color: #ed145b;
@@ -58,9 +59,11 @@
     padding: 8px;
     margin-top: 5px;
     margin-bottom: 10px;
+    outline: none;
 }
 
 .text-encoder, .text-decoder{
+    border-radius: 5px;
     background-color: #4F4F4F;
     color: antiquewhite;  
     text-align: center;
@@ -70,10 +73,10 @@
 
 .layout-button-code, .layout-button-decode, .back-screen{
     border-radius: 5px;
-    padding: 1%;
+    padding: 1.5%;
     margin: 1%;
     width: 18%;
-    font-size: 14px;
+    font-size: 13px;
     background-color:#ed145b;
     border: none;
     color: antiquewhite;
